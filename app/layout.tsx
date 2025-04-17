@@ -24,12 +24,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* This script forces light theme on initial load before hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                localStorage.setItem('theme', 'light');
+              })()
+            `,
+          }}
+        />
+      </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false} // Disable system preference
+          disableTransitionOnChange
+        >
           <SectionThemeProvider>{children}</SectionThemeProvider>
         </ThemeProvider>
-                <Toaster  />
-  </body>
+        <Toaster />
+      </body>
     </html>
   )
 }

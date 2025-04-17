@@ -113,8 +113,8 @@ export function Navbar({ activeSection, onSectionChange }: NavbarProps) {
           // Inline styles as a fallback
           backgroundColor:
             theme === "dark"
-              ? "rgba(0, 0, 0, 0.6)"
-              : "rgba(255, 255, 255, 0.6)",
+              ? "rgba(0, 0, 0, 0.9)"
+              : "rgba(255, 255, 255, 0.9)",
         }}
       />
 

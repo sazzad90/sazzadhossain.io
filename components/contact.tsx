@@ -57,7 +57,7 @@ export function Contact() {
     }
   }
   return (
-    <section id="contact" className="min-h-screen pt-24 pb-16 px-8 bg-gradient-to-b from-background to-amber-100/10">
+    <section id="contact" className="min-h-screen pt-24 pb-8 px-8 bg-gradient-to-b from-background to-amber-100/10">
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-4">
         <h2 className="text-3xl sm:text-3xl font-medium mb-8 text-amber-500 dark:text-amber-400">Contact Me</h2>
@@ -83,7 +83,7 @@ export function Contact() {
           </CardHeader>
           <CardContent>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="name"
@@ -137,7 +137,7 @@ export function Contact() {
                       <FormControl>
                         <Textarea
                           placeholder="Your message"
-                          className="min-h-[75px] focus-visible:ring-amber-500"
+                          className="min-h-[90px] focus-visible:ring-amber-500"
                           {...field}
                         />
                       </FormControl>
