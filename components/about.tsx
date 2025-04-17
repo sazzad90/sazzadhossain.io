@@ -76,7 +76,7 @@ export function About() {
 
         <div className="max-w-2xl space-y-4">
           <p className="text-lg">
-            I'm a passionate fullstack developer with expertise in building
+            I&#39;m a passionate fullstack developer with expertise in building
             modern web applications. With a strong foundation in both frontend
             and backend technologies, I create seamless, user-friendly
             experiences that solve real-world problems.

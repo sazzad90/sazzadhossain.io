@@ -1,4 +1,3 @@
-// lib/sendEmail.ts
 import nodemailer from "nodemailer"
 export async function sendEmail({
   to,

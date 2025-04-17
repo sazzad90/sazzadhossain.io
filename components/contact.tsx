@@ -11,7 +11,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
-// import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -22,7 +21,6 @@ const formSchema = z.object({
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-//   const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -33,24 +31,7 @@ export function Contact() {
       message: "",
     },
   })
-
-  // function onSubmit(values: z.infer<typeof formSchema>) {
-  //   setIsSubmitting(true)
-
-  //   // Simulate form submission
-  //   setTimeout(() => {
-  //     console.log(values)
-  //     setIsSubmitting(false)
-  //     form.reset()
-  //     toast("Event has been created.")
-
-  //   //   toast({
-  //   //     title: "Message sent!",
-  //   //     description: "Thank you for your message. I'll get back to you soon.",
-  //   //   })
-  //   }, 1500)
-  // }
-
+  
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
   
@@ -83,7 +64,7 @@ export function Contact() {
 
           <h3 className="text-xl text-amber-500 dark:text-amber-400">Get In Touch</h3>
           <p className="text-lg">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            I&#39;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <div className="space-y-2">
             <p>
@@ -98,7 +79,7 @@ export function Contact() {
         <Card className="border-amber-300 dark:border-amber-800">
           <CardHeader>
             <CardTitle className="text-amber-500 dark:text-amber-400">Send Me a Message</CardTitle>
-            <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
+            <CardDescription>Fill out the form below and I&#39;ll get back to you as soon as possible.</CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>

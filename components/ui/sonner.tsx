@@ -3,12 +3,7 @@
 import { useTheme } from "next-themes"
 import { Toaster as SonnerToaster, type ToasterProps } from "sonner"
 
-// Extend the ToasterProps type from sonner to include any additional props we might need
-export interface CustomToasterProps extends ToasterProps {
-  // Add any additional custom props here if needed
-}
-
-export function Toaster(props: CustomToasterProps) {
+export function Toaster(props: ToasterProps) {
   const { theme } = useTheme()
 
   return (

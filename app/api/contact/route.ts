@@ -11,10 +11,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
-    // Here you would typically send an email using a service like SendGrid, Mailgun, etc.
-    // For demonstration purposes, we'll just log the data and return a success response
-    console.log("Contact form submission:", { name, email, subject, message })
-
     // Send the email
     await sendEmail({
       to: `<${process.env.SMTP_USER}>`, // recipient email address
