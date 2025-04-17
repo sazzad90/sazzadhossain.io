@@ -30,7 +30,7 @@ export function About() {
           </div>
 
           {/* Circular image holder */}
-          <div className="relative w-40 h-40 md:w-70 md:h-70 rounded-full overflow-hidden border-0 border-background shadow-xl mr-10 md:mr-14">
+          <div className="relative w-30 h-30 sm:w-35 sm:h-35 md:w-80 md:h-80 rounded-full overflow-hidden border-0 border-background shadow-xl mr-10 md:mr-14">
             <Image
               src={profileImage}
               alt="Profile"
