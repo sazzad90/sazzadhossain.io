@@ -14,7 +14,7 @@ export function About() {
       className="min-h-screen pt-24 pb-16 px-8 bg-gradient-to-b from-background to-primary-100/10"
     >
       <div className="space-y-8">
-        <div className="flex flex-row items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <TypeAnimation
               sequence={["Sazzad hossain", 1000]}
@@ -30,8 +30,8 @@ export function About() {
           </div>
 
           {/* Circular image holder */}
-          <div className="relative w-30 h-30 sm:w-35 sm:h-35 md:w-80 md:h-80 rounded-full overflow-hidden border-0 border-background shadow-xl mr-10 md:mr-14">
-            <Image
+          <div className="relative aspect-square w-60 h-60 sm:w-60 sm:h-60 md:w-70 md:h-70 lg:w-80 lg:h-80 rounded-full overflow-hidden border-0 shadow-xl mx-auto sm:mx-0 md:mr-14">
+          <Image
               src={profileImage}
               alt="Profile"
               fill
